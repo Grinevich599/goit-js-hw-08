@@ -32,9 +32,6 @@ function onInput({ target }) {
 
 function clearForm(event) {
   event.preventDefault();
-  const userData = JSON.parse(localStorage.getItem('feedback-form-state'));
-  console.log(userData);
-
-  localStorage.clear();
+  localStorage.removeItem('feedback-form-state'); 
   form.reset();
 }
